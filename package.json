@@ -6,6 +6,7 @@
     "@material-ui/core": "^3.6.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-is": "^16.6.3",
     "react-scripts": "2.1.1"
   },
   "scripts": {
@@ -13,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "npx start-storybook -p 9001 -c .storybook",
+    "update": "npx jest --updateSnapshot"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,8 +27,13 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/react": "^4.0.9",
-    "babel-core": "^7.0.0-beta.3",
-    "babel-loader": "^8.0.4"
+    "@babel/core": "^7.1.6",
+    "@storybook/addon-backgrounds": "^4.0.10",
+    "@storybook/react": "^4.0.10",
+    "babel-loader": "^8.0.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "prop-types": "^15.6.2",
+    "react-test-renderer": "^16.6.3"
   }
 }
