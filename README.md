@@ -36,6 +36,22 @@ Then add the block below to your `launch.json` file and put it inside the `.vsco
   }]
 }
 ```
+## TEST
+https://facebook.github.io/create-react-app/docs/running-tests
+
+https://jestjs.io/docs/en/snapshot-testing
+
+https://airbnb.io/enzyme/docs/api/
+
+https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests
+
+support `jest --updateSnapshot`,  add the block below to your `.babelrc` file
+```
+{
+  "presets": ["babel-preset-react-app"]
+}
+```
+
 ## License
 
 Web SQL Editor is open source software [licensed as MIT](https://github.com/facebook/create-react-app/blob/master/LICENSE).
