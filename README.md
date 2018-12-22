@@ -37,12 +37,7 @@ Then add the block below to your `launch.json` file and put it inside the `.vsco
 }
 ```
 ## TEST
-https://facebook.github.io/create-react-app/docs/running-tests
-
-https://jestjs.io/docs/en/snapshot-testing
-
-https://airbnb.io/enzyme/docs/api/
-
+To debug jest with VS Code, see 
 https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests
 
 To support `jest --updateSnapshot`,  add the block below to your `.babelrc` file
@@ -72,6 +67,14 @@ Object.defineProperty(window, 'Request', {
   value: Request,
 });
 ```
+
+other docs:
+
+https://facebook.github.io/create-react-app/docs/running-tests
+
+https://jestjs.io/docs/en/snapshot-testing
+
+https://airbnb.io/enzyme/docs/api/
 
 ## License
 
