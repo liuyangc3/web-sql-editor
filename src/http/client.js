@@ -12,8 +12,9 @@ export class HttpClient {
   interceptors = [];
 
   constructor(handler) {
-    handler ? this.handler = handler
-      : this.handler = new HttpFetchHandler();
+    // handler must impl hanlle(req: HttpRequest)
+    // wo dont check handler here
+    this.handler = handler ? handler : new HttpFetchHandler();
   }
 
   enableCookies(bool) {
