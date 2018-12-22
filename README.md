@@ -45,11 +45,32 @@ https://airbnb.io/enzyme/docs/api/
 
 https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests
 
-support `jest --updateSnapshot`,  add the block below to your `.babelrc` file
+To support `jest --updateSnapshot`,  add the block below to your `.babelrc` file
 ```
 {
   "presets": ["babel-preset-react-app"]
 }
+```
+
+To support `fetch API` in jest, add the block below to `pacjage.json`.
+
+```
+"jest": {
+  "verbose": true,
+  "setupFiles": ["<rootDir>/src/setupTests.js"]
+}
+```
+
+then run `npm install node-fetch --save--dev` and create a `setupTests.js` file under src folder.
+```
+import { Headers, Request } from 'node-fetch';
+
+Object.defineProperty(window, 'Headers', {
+  value: Headers,
+});
+Object.defineProperty(window, 'Request', {
+  value: Request,
+});
 ```
 
 ## License
