@@ -17,7 +17,7 @@ export class HttpClient {
     this.handler = handler ? handler : new HttpFetchHandler();
   }
 
-  enableCookies(bool) {
+  supportCookies(bool) {
     this.withCredentials = bool;
   }
 
