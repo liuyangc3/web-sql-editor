@@ -57,7 +57,8 @@ To support `fetch API` in jest, add the block below to `pacjage.json`.
 ```
 
 then run `npm install node-fetch --save--dev` and create a `setupTests.js` file under src folder.
-```
+```js
+// src/setupTests.js
 import { Headers, Request } from 'node-fetch';
 
 Object.defineProperty(window, 'Headers', {
