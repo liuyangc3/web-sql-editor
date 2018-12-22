@@ -32,6 +32,9 @@ export class HttpRequest {
   responseType = 'json';
 
   /**
+   * @param {string} method
+   * @param {string} url
+   * @param {string|object|ArrayBuffer} body
    * @param {Oject} options
    * options.headers `Headers`
    * options.params `HttpParams`
@@ -66,7 +69,7 @@ export class HttpRequest {
 
     if (!this.headers) {
       this.headers = new Headers({
-        'Accept': 'application/json',
+        'Accept': 'application/json;charset=UTF-8',
       });
     }
 

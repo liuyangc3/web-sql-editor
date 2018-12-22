@@ -26,7 +26,7 @@ describe('test HttpParams', () => {
     expect(new HttpParams({ fromString: '' }).toString()).toBe('');
     expect(new HttpParams({ fromString: 'foo' }).toString()).toBe('foo');
     expect(new HttpParams({ fromString: 'foo=bar' }).toString()).toBe('foo=bar');
-    // we dont check duplicate from input
+    // we don't check duplicate from input
     expect(new HttpParams({ fromString: 'foo=bar&foo=bar' }).toString()).toBe('foo=bar&foo=bar');
     expect(new HttpParams({ fromString: 'foo=bar&foo=bar2' }).toString()).toBe('foo=bar&foo=bar2');
     expect(new HttpParams({ fromString: 'foo=bar&key=value' }).toString()).toBe('foo=bar&key=value');
@@ -34,7 +34,7 @@ describe('test HttpParams', () => {
 
   it('should construct options.fromObject', () => {
     expect(new HttpParams({ fromObject: {} }).toString()).toBe('');
-    // we dont check duplicate from construct
+    // we don't check duplicate from construct
     expect(new HttpParams({ fromObject: { foo: ['', ''] } }).toString()).toBe('foo&foo');
     expect(new HttpParams({ fromObject: { foo: ['bar', 'bar'] } }).toString()).toBe('foo=bar&foo=bar');
 
@@ -48,7 +48,7 @@ describe('test HttpParams', () => {
     expect(new HttpParams({ fromObject: { foo: [] } }).toString()).toBe('foo');
     expect(new HttpParams({ fromObject: { foo: null } }).toString()).toBe('foo');
     expect(new HttpParams({ fromObject: { foo: [null, ''] } }).toString()).toBe('foo');
-    // we dont check duplicate from construct
+    // we don't check duplicate from construct
     expect(new HttpParams({ fromObject: { foo: [null, '', ''] } }).toString()).toBe('foo&foo');
   });
 
