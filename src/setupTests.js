@@ -1,4 +1,4 @@
-import { Headers } from 'node-fetch';
+import { Headers, Request } from 'node-fetch';
 
 
 const localStorageMock = (function() {
@@ -24,4 +24,7 @@ Object.defineProperty(window, 'localStorage', {
 });
 Object.defineProperty(window, 'Headers', {
   value: Headers,
+});
+Object.defineProperty(window, 'Request', {
+  value: Request,
 });
